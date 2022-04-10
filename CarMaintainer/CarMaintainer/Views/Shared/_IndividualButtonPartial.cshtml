@@ -1,0 +1,19 @@
+﻿@*
+    a button for view
+    @model.ButtonType = css type
+    @Url.Action(Model.Action)=action name
+    @model.ActionParameters=parameters
+    @Model.Glyph=icon type
+    @model.Text=button type
+    this is the button (view,edit,delete) properties
+*@
+
+
+@model CarMaintainer.Models.IndividualButtonPartial
+<!--the parameters is taken from individual button partial model which is in the reference-->
+<a type="button" class="btn btn-sm @Model.ButtonType"
+   href="@Url.Action(Model.Action)@Model.ActionParameters">
+    <span class="glyphicon glyphicon-@Model.Glyph">
+    </span>
+    <span class="sr-only">@Model.Text</span>
+</a>

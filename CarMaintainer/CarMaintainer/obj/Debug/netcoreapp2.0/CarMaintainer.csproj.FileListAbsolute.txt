@@ -1,0 +1,24 @@
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.deps.json
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.runtimeconfig.json
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.runtimeconfig.dev.json
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.dll
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.pdb
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.csprojAssemblyReference.cache
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.csproj.CoreCompileInputs.cache
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.AssemblyInfoInputs.cache
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.AssemblyInfo.cs
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.dll
+C:\Users\majd_1m\source\repos\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.pdb
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.deps.json
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.runtimeconfig.json
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.runtimeconfig.dev.json
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.dll
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\bin\Debug\netcoreapp2.0\CarMaintainer.pdb
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.csprojAssemblyReference.cache
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.csproj.CoreCompileInputs.cache
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.AssemblyInfoInputs.cache
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.AssemblyInfo.cs
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.dll
+C:\Users\majd_1m\Desktop\asp.net project\CarMaintainer\CarMaintainer\obj\Debug\netcoreapp2.0\CarMaintainer.pdb

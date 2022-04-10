@@ -1,0 +1,115 @@
+﻿@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!--this for search -->
+<form asp-controller="Users" asp-action="Index" method="get">
+    <br />
+    <h2>Customers</h2>
+    <hr />
+    <div style="height:60px;">
+        <div class="col-sm-3" style="padding-top:20px;">
+            <!--register button-->
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary" style="width:200px;">
+                <span class="glyphicon glyphicon-plus"></span> &nbsp; Create New Customer
+            </a>
+        </div>
+        <div class="col-sm-9">
+            <!-- Search criteria-->
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <b>Search: </b>
+                    <label class="radio-inline">@Html.RadioButton("option", "name")Name</label>
+                    <label class="radio-inline">@Html.RadioButton("option", "email")Email</label>
+                    <label class="radio-inline">@Html.RadioButton("option", "phone")Phone</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="pull-right">
+                    <button type="submit" name="submit" value="Search" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                </div>
+                <div class="pull-right">
+                    @Html.Editor("search", new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <br />
+    <!--displaying users place-->
+    <div class="form-border">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>
+                    <!--html helper-->
+                    <p class="toLeft">
+                        @Html.DisplayNameFor(m => m.FirstName)
+                    </p>
+                </th>
+                <th>
+                    <p class="toLeft">
+                        @Html.DisplayNameFor(m => m.LastName)
+                        </p>
+                </th>
+                <th>
+                    <p class="toLeft">
+                        @Html.DisplayNameFor(m => m.PhoneNumber)
+                        </p>
+                </th>
+                <th>
+                    <p class="toLeft">
+                        @Html.DisplayNameFor(m => m.Email)
+                        </p>
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <!--displaying users information-->
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <p class="toLeft">
+                            @Html.DisplayFor(m => item.FirstName)
+                        </p>
+                    </td>
+                    <td>
+                        <p class="toLeft">
+                            @Html.DisplayFor(m => item.LastName)
+                        </p>
+                    </td>
+                    <td>
+                        <p class="toLeft">
+                            @Html.DisplayFor(m => item.PhoneNumber)
+                        </p>
+                    </td>
+                    <td>
+                        <p class="toLeft">
+                            @Html.DisplayFor(m => item.Email)
+                        </p>
+                    </td>
+                    <td>
+                        <p class="toLeft">
+                            <a asp-controller="cars" asp-action="Index" asp-route-userId="@item.Id">
+                                View Cars
+                            </a>
+                        </p>
+                    </td>
+                    <td>
+                        <!--Edit, Delete, Details sections-->
+                        <!-- Pass to _TableButtonPartial view the Edit,Delete,Details buttons id () in order to make the button valid for use-->
+                        @Html.Partial("_TableButtonPartial", new IndividualButtonPartial { CustomerId = item.Id })
+
+                    </td>
+                </tr>
+
+            }
+        </table>
+    </div>
+</form>
+
+

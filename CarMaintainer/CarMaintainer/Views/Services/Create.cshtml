@@ -1,0 +1,89 @@
+﻿@model CarMaintainer.ViewModel.CarAndServicesViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+@Html.Partial("_CarDetailsInService")
+<hr />
+
+<h4>Service</h4>
+<div class="row form-border">
+    @*post*@
+    <form asp-action="Create">
+        <input asp-for="carId" hidden />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-sm-5">
+            @* Miles and Price, with Submit Button*@
+            <div class="row">
+                <div class="col-sm-3">
+                    <label asp-for="NewServiceObj.Miles" class="control-label"></label>
+                </div>
+                <div class="col-sm-9" style="padding-bottom:5px;">
+                    <input asp-for="NewServiceObj.Miles" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label asp-for="NewServiceObj.Price" class="control-label"></label>
+                </div>
+                <div class="col-sm-9" style="padding-bottom:5px;">
+                    <input asp-for="NewServiceObj.Price" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-9" style="padding-bottom:5px;">
+                    <input type="submit" value="Add Service" class="btn btn-sm btn-primary form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-sm-offset-2">
+
+            @* Details and ServiceType *@
+            <div class="row">
+                <div class="col-sm-3">
+                    <label asp-for="NewServiceObj.Details" class="control-label"></label>
+                </div>
+                <div class="col-sm-9" style="padding-bottom:5px;">
+                    <input asp-for="NewServiceObj.Details" class="form-control toLeft" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label asp-for="NewServiceObj.ServiceTypeId" class="control-label"></label>
+                </div>
+                <div class="col-sm-9" style="padding-bottom:5px;">
+                    @*what to display inside drop down*@
+                    <select asp-for="NewServiceObj.ServiceTypeId" asp-items="@(new SelectList(Model.ServiceTypesObj,"Id","Name"))" class="form-control toLeft"></select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br />
+<hr />
+<h4>Past Service Records</h4>
+<div class="row form-border">
+    @Html.Partial("_DisplayPastServices", Model)
+
+    <div class="row">
+        @if (Model.PastServicesObj.Count() == 0)
+        {
+            <div class="col-sm-12 text-primary toLeft" style="padding-bottom:20px;">No past service records found.</div>
+        }
+        <div class="col-sm-3">
+            <a asp-controller="Cars" asp-action="Index" asp-route-userId="@Model.UserId" class="btn btn-sm btn-success toLeft">Back to List</a>
+        </div>
+        <div class="row"></div>
+            @if (Model.PastServicesObj.Count() > 4)
+            {
+                <div class="pull-right" style="padding-right:20px;">
+                    <a asp-action="Index" asp-route-carId="@Model.carId" class="text-primary">Load All..</a>
+                </div>
+            }
+        </div>
+
+    </div>
+

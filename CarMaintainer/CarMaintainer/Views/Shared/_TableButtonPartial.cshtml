@@ -1,0 +1,44 @@
+﻿@*
+    group of 3 buttons
+    button properties= _IndividualButtonPartial
+*@
+@model CarMaintainer.Models.IndividualButtonPartial
+
+<td style="width:150px;">
+    <div class="btn-group" role="group">
+        @Html.Partial("_IndividualButtonPartial",
+            new IndividualButtonPartial { 
+                Action="Edit",
+                ButtonType="btn-primary",
+                Glyph="pencil",
+                Text = "Edit Button",
+                ServiceId=Model.ServiceId,
+                CustomerId=Model.CustomerId,
+                CarId=Model.CarId
+            })
+
+        @Html.Partial("_IndividualButtonPartial",
+            new IndividualButtonPartial
+            {
+                Action = "Details",
+                ButtonType = "btn-success",
+                Glyph = "list",
+                Text = "Details Button",
+                ServiceId = Model.ServiceId,
+                CustomerId = Model.CustomerId,
+                CarId = Model.CarId
+            })
+
+        @Html.Partial("_IndividualButtonPartial",
+            new IndividualButtonPartial
+            {
+                Action = "Delete",
+                ButtonType = "btn-danger",
+                Glyph = "trash",
+                Text = "Delete Button",
+                ServiceId = Model.ServiceId,
+                CustomerId = Model.CustomerId,
+                CarId = Model.CarId
+            })
+    </div>
+</td>
